@@ -19,7 +19,7 @@
                     <td><i class="fa fa-trash"></i></td>
                     <td>{{$perfil->nombre}}</td>
                 </tr>
-             @enforeach
+             @endforeach
             </tbody>
         </table>
     </div>
