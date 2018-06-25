@@ -1,0 +1,12 @@
+footer{
+    background-color: black;
+    text-align: center;
+    color:white;
+    padding: 20px;
+}
+.w-100{
+    width: 100%;
+    height: 550px; /* originalmente 600px */
+    overflow: hidden;
+    position: relative;
+}
