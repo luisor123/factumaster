@@ -4,7 +4,7 @@
 @section('contenido')
     <div class="container text-center">
         <h1>Crear Perfil</h1>
-        {!! Form::open(['url' => 'perfiles.store']) !!}
+        {!! Form::open(['route' => 'perfiles.store']) !!}
             <div class="form-group">
                 {!! Form::text('nombre',null,array(
                     'class'=>'form-control',
