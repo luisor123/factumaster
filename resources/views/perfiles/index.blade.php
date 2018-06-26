@@ -2,9 +2,11 @@
 @section('titulo','Listado de Perfiles')
 
 @section('contenido')
-    <div class="container">
+    <div class="container text-center">
         <h1>Listado de Perfiles</h1>
-        <table class="table table-striped">
+        <a class="btn btn-success" href="{{route('perfiles.create')}}">Crear nuevo Perfil</a>
+        <hr>
+        <table class="table table-striped table-hover">
             <thead>
                 <tr>
                     <th>Editar</th>
