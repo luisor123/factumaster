@@ -11,13 +11,23 @@ class PerfilesController extends Controller
         $perfiles =Perfil::all();
         return view('perfiles.index',compact('perfiles'));
     }
+    //LLamar la vista encargada de crear un nuevo perfil
     public function create()
     {
-        //
+        return view('perfiles.crear');
     }
+    //Recibir los datos y guardalos en la tabla de perfiles
     public function store(Request $request)
     {
-        //
+        //Validar la informacion 
+        $this->validate($request,[
+            'nombre'=>'required|unique:perfiles'
+        ]);
+        //Guardar la informaciòn en la tabla
+        $perfil = Perfil::create([
+            'nombre'=> $request-> get('nombre')
+        ]);
+        return redirect()->route('perfiles.index');
     }
 
     public function show($id)
