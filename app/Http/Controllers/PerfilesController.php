@@ -32,7 +32,8 @@ class PerfilesController extends Controller
 
     public function show($id)
     {
-        //
+        $perfil =Perfil::find($id);
+        return view('perfiles.editar',compact('perfil'));
     }
 
     public function edit($id)

@@ -17,7 +17,11 @@
             <tbody>
              @foreach($perfiles as $perfil)
                 <tr>
-                    <td><i class="fa fa-pencil"></i></td>
+                    <td>
+                    <a href="{{route('perfiles.edit',$perfil->id)}}">
+                    <i class="fa fa-pencil"></i>
+                    </a> 
+                    </td>
                     <td><i class="fa fa-trash"></i></td>
                     <td>{{$perfil->nombre}}</td>
                 </tr>
